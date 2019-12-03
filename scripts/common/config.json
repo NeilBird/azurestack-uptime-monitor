@@ -1,0 +1,41 @@
+{
+    "version":{
+        "script":"1.1",
+        "influxdb":"1.7.3",
+        "grafana":"5.4.3",
+        "azurecli":"2.0.57"
+    },
+    "files": {
+        "common": [
+            "/common/config.json",
+            "/common/cron_job.sh",
+            "/common/cron_tab.conf",
+            "/common/debug_azurecli.sh",
+            "/common/debug_export.sh"
+        ],
+        "dashboards": [
+            "/grafana/dashboards/availability.yaml",
+            "/grafana/dashboards/availability.json"
+        ],
+        "datasources": [
+            "/grafana/datasources/influxdb.yml"
+        ],
+        "jobs": [
+            "/cli/jobs/admin_arm.sh",
+            "/cli/jobs/admin_portal.sh",
+            "/cli/jobs/tenant_arm.sh",
+            "/cli/jobs/tenant_portal.sh",
+            "/cli/jobs/tenant_storage.sh"
+        ],
+        "shared": [
+            "/cli/shared/functions.sh",
+            "/cli/shared/mainTemplate.json",
+            "/cli/shared/srv_blob.sh",
+            "/cli/shared/srv_csv.sh",
+            "/cli/shared/srv_pnu.sh"
+        ],
+        "deploy": [
+            "/deploy/disconnected.sh"
+        ]
+    }
+}
